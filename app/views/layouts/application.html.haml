@@ -3,8 +3,16 @@
   %head
     %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }
     - viewport = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
-    %meta{ name: 'viewport', content: viewport }
-    %title= (content_for :title) || 'citadel'
+    %title
+      = content_for :title
+      \- rsl.tf
+    %meta{:content => "Respawn League - non-standard competitive formats for Oceania!", :name => "description"}/
+    %meta{:content => "#{content_for :title} - rsl.tf", :property => "og:title"}/
+    %meta{:content => "Respawn League - non-standard competitive formats for Oceania!", :property => "og:description"}/
+    %meta{:content => "website", :property => "og:type"}/
+    %meta{:content => "#{asset_path 'respawn-colour.png'}", :property => "og:image"}/
+    %meta{:content => "#d99347", :name => "theme-color"}/
+    %link{:href => "#{asset_path 'respawn-colour.png'}", :rel => "icon", :sizes => "192x192"}/
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = content_for :head
@@ -17,8 +25,8 @@
                               area: { controls: 'main-menu', expanded: 'false', label: 'Toggle main menu' } }
         %span.navbar-toggler-icon
 
-      = link_to('/', class: 'navbar-brand order-2') do
-        = image_tag 'logo.png', height: '40px', width: '95px'
+      = link_to('/', class: 'navbar-brand order-2 pad-right') do
+        = image_tag 'respawn-colour.png', width: '48px'
 
       - if user_signed_in?
         .d-flex.align-items-center.position-relative.ml-auto.order-4

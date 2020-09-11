@@ -13,6 +13,7 @@
 
 @import 'bootstrap_theme'
 
+
 // External styles
 @import 'bootstrap'
 @import 'rails_bootstrap_forms'
@@ -26,11 +27,15 @@
 @import 'leagues'
 @import 'markdown'
 
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+
 html
   font-size: 14px
 
 body
   padding-top: $navbar-height
+  font-family: 'Roboto', sans-serif
 
 h1, h2, h3, h4, h5
   word-break: break-all
@@ -140,3 +145,16 @@ ul.list-group.list-dynamic-add
 // Workaround for webkit having shit flexbox support
 .webkit-min-height-fit-content
   min-height: fit-content
+
+//
+// CUSTOM CSS
+//
+
+.pad-right
+  padding-right: 1rem
+
+.nav-link
+  font-weight: 700
+
+a:hover
+  text-decoration: none
