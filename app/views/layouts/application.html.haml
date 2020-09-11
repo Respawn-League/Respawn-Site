@@ -26,7 +26,7 @@
         %span.navbar-toggler-icon
 
       = link_to('/', class: 'navbar-brand order-2 pad-right') do
-        = image_tag 'respawn-colour.png', width: '48px'
+        = image_tag 'respawn-colour.png', width: '36px'
 
       - if user_signed_in?
         .d-flex.align-items-center.position-relative.ml-auto.order-4
@@ -40,6 +40,7 @@
       .collapse.navbar-collapse.order-6.order-lg-3#main-menu
         %ul.navbar-nav= render 'navbar'
 
+    %br
     .container.my-3#content
       .row
         .col-md-9
