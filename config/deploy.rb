@@ -1,16 +1,16 @@
 # config valid only for current version of Capistrano
-lock '3.12.0'
+lock '3.14.1'
 
 set :application, 'citadel'
 set :rvm_ruby_string, 'ruby-2.5.0'
 
 # git settings
-set :repo_url, 'git@github.com:ozfortress/citadel.git'
+set :repo_url, 'git@github.com:Respawn-League/Respawn-Site.git'
 set :branch, :master
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/opt/citadel'
-
+set :deploy_to, '/opt/respawn'
+set :rvm_custom_path, "/usr/share/rvm"
 set :rails_env, 'production'
 
 # Default value for :format is :pretty
