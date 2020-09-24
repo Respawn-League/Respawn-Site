@@ -30,6 +30,16 @@
       %span.mx-2= '/'
       %span= @user.steam_id
 
+    %p.steam-link-large
+      = link_to "LOGS", 'http://logs.tf/profile/' + @user.steam_id.to_s, class: 'steam_link'
+      = link_to "OZFORTRESS", 'https://ozfortress.com/users/steam_id/' + @user.steam_id.to_s, class: 'steam_link'
+      = link_to "ETF2L", 'http://etf2l.org/search/' + @user.steam_id.to_s, class: 'steam_link'
+      = link_to "RGL", 'https://rgl.gg/public/PlayerProfile.aspx?p=' + @user.steam_id.to_s, class: 'steam_link'
+      = link_to "MATCH.TF", 'https://match.tf/users/steam_id/' + @user.steam_id.to_s, class: 'steam_link'
+      = link_to "RSP / PAN.TF", 'https://pan.tf/users/steam_id/' + @user.steam_id.to_s, class: 'steam_link'
+      = link_to "FBTF", 'https://fbtf.tf/users/steam_id/' + @user.steam_id.to_s, class: 'steam_link'
+      = link_to "UGC", 'http://www.ugcleague.com/players_page.cfm?player_id=' + @user.steam_id.to_s, class: 'steam_link'
+
 .row.mb-3
   != present_collection(@titles).map(&:icon).join(' ')
 
