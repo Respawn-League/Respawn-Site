@@ -30,6 +30,7 @@
       %span.mx-2= '/'
       %span= @user.steam_id
 
+    %br
     %p.steam-link-large
       = link_to "LOGS", 'http://logs.tf/profile/' + @user.steam_id.to_s, class: 'steam_link'
       = link_to "OZFORTRESS", 'https://ozfortress.com/users/steam_id/' + @user.steam_id.to_s, class: 'steam_link'
