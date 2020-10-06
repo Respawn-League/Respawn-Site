@@ -8,6 +8,8 @@
   = f.text_field :name
   = render 'form', f: f, user: @user, user_p: user_p
 
+  %span By signing up to this website, you agree to abide by our Community Guidelines.
+
   .d-flex.justify-content-end
     = link_to 'Cancel', :back, class: 'btn btn-link mr-2'
     = f.submit 'Register'
